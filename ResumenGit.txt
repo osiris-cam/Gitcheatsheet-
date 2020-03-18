@@ -1,28 +1,67 @@
-//Tarea//
+										//CAPITULO 2//
 
-git config --global user.name
-git config --global user.mail
+$ git config --global user.name: Set a username in Git.
+
+$ git config --global user.mail: Set a username with email in Git
+
 $ git init: Crea un subdirectorio llamado .git  que contiene los archivos necesarios del repositorio.
-* git
-git commit -m ""
-La simple instruccion git despliega un menu de comandos que podremos usar cuando
-necesitemos de esta herramienta
-git push
-git pull
-git add
-git add *
-git clone
-git status
-git status -s
-git diff
-git mv
-git commit --amend
-git reset
-git checkout
-git remote
-git log
-git rm
-git help
-git commit
 
+git commit -m "": Commits the files that we indicate, in this way our modifications are saved.
 
+$ git push -u origin master ": upload changes to remote repository on GitHub for the first time-
+
+$ git pull: download the changes from the remote repository to our local copy.
+
+$ git add: Add the files that we indicate to the repository.
+
+$ git add *: add the document (or folder) in the waiting area ("stage")
+
+$ git clone: To clone the GitHub repository (only once).
+
+$ git status: It indicates the status of the repository, for example which are modified, which are not being followed by GIT, among other characteristics.
+ 
+$ git status -s: option to get an abbreviated status, so you can see your changes in a more compact way.
+
+$ git diff: Compare what you have in your working directory with what is in the preparation area. The result indicates the changes you have made but have not yet prepared.
+
+$ git mv : to remove and instantly add a new file instead of the old one.
+
+$ git commit --amend: allows you to change the most recent commit message.
+ 
+$ git reset: Reset current HEAD to the specified state
+
+git checkout: Create a new branch and automatically GIT changes to the created branch, cloning the branch from where we execute the command.
+
+$ git remote: point to the direction where you want to upload the new material.
+
+$ git log: displays all of the commits in a repository’s history.
+
+$ git rm: to remove the files from a repository
+
+										//CAPITULO 3//
+
+$ git branch: create a new pointer so you can move it freely.
+
+$ git checkout: To jump from one branch to another
+
+$ git checkout master: The checked out branch will have a * before the name. If the return designates anything other then master then switch to master
+
+$ git merge: It makes a merge between two branches, in this case the address of the merge would be between the branch that we indicate in the command, and the branch where we are located.
+
+$ git mergetool: to run one of several merge utilities to resolve merge conflicts. It is typically run after git merge.
+
+$ git add -u: In order to remove deleted files from the version control, I can again either remove individually or from the root address them all like 
+
+$ git branch: It shows us a list of the branches that exist in our repository.
+ 
+$ git branch --merged: To see which branches are already merged into the branch you’re on
+
+$ git fetch origin: This command locates which server the source is on.
+
+$ git fetch teamone; To include it as a new remote reference to your current project.
+
+$ git push origin: After we made a git commit, if we are working remotely, this command will upload the files to the remote repository, specifically to the branch that we indicate..
+
+$ git push --force: Update remote refs along with associated objects.
+
+$ git pull --rebase: To capture all confirmed changes in one branch and reapply them to another. 
