@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 // forward declarations
-	int can_print_it(char ch); //transform the paraemter int to a char ch
+	int can_print_it(char ch); //change the letter to ascii numbers (the parameters)
 	void print_letters(char arg[]);
 void print_arguments(int argc, char *argv[]){
 	int i = 0;
@@ -13,9 +13,9 @@ void print_arguments(int argc, char *argv[]){
 void print_letters(char arg[]){
 	int i = 0;
 	for(i = 0; arg[i] != '\0'; i++) { 
-		char ch = arg[i]; //this parameter, now is taken like arg[]
-		if(can_print_it(ch)) { //
-			printf("'%c' == %d ", ch, ch);
+		char ch = arg[i]; //this parameter ascii, now is taken like arg[]
+		if(can_print_it(ch)) { // print if is the value
+			printf("'%c' == %d ", ch, ch); // if exist the equivalence, print. 
 		}
 	}
 	printf("\n");
@@ -102,4 +102,4 @@ $ ./Excer14
 K&R code also allowed: int foo(a, p) char *p; { … }. Arguments for which a type was not explicitly defined 
 were assumed to be int. Note, too, that you could write: foo (a, b, c, d, e, f, g) double f; char *e, *b; { … }, 
 not only missing the return type (assumed to be int) but also missing explicit types*/
-for a number of arguments (a, c, d, g — assumed to be int, therefore), and listing the types of the other arguments in an order unrelated to the sequence in which the arguments appear in the parameter list.
+//for a number of arguments (a, c, d, g — assumed to be int, therefore), and listing the types of the other arguments in an order unrelated to the sequence in which the arguments appear in the parameter list.
