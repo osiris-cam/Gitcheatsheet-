@@ -1,32 +1,32 @@
 #include <stdio.h>
 #include <ctype.h>
 // forward declarations
-	int can_print_it(char ch);
+	int can_print_it(char ch); //transform the paraemter int to a char ch
 	void print_letters(char arg[]);
 void print_arguments(int argc, char *argv[]){
 	int i = 0;
-	for(i = 0; i < argc; i++) {
-		print_letters(argv[i]);
+	for(i = 0; i < argc; i++) { //loop the argumets
+		print_letters(argv[i]); //print the elements
 	}
 }
 
 void print_letters(char arg[]){
 	int i = 0;
-	for(i = 0; arg[i] != '\0'; i++) {
-		char ch = arg[i];
-		if(can_print_it(ch)) {
+	for(i = 0; arg[i] != '\0'; i++) { 
+		char ch = arg[i]; //this parameter, now is taken like arg[]
+		if(can_print_it(ch)) { //
 			printf("'%c' == %d ", ch, ch);
 		}
 	}
 	printf("\n");
-}
+} 
 
 int can_print_it(char ch){
-	return isalpha(ch) || isblank(ch);
+	return isalpha(ch) || isblank(ch); // isalpha is for checks whether a character is an alphabet or not. Isblank returns non-zero if ch is a character for which isspace() returns true and is used to separate words.
 }
 
 int main(int argc, char *argv[]){
-	print_arguments(argc, argv);
+	print_arguments(argc, argv); //print out the characters and ASCII codes for any that are "alpha" or "blanks".
 	return 0;
 }
 
