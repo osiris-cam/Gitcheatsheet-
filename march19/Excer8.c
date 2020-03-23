@@ -3,19 +3,19 @@
 int main (int argc, char **argv[]){
 
 
-	int areas []= {10, 12,13,14,20};
-	char name []= "zed";
-	char full_name[]= { 'Z', 'e','d',' ','A','.',' ','S','h','a','W','\0'};
-	printf ("The size of an int: %ld\n", sizeof(int));
-	printf("The size of areas (int[]):%ld\n", sizeof(areas));
-	printf ("The number of inits in areas: %ld\n", sizeof(areas)/ sizeof(int));
-	printf("The first area is &d, the 2nd %d.\n", areas[0], areas[1]);
-	printf("The size of a char : %ld\n", sizeof(char));
-	printf("The size of name (char[]): %ld\n", sizeof(name));
+	int areas []= {10, 12,13,14,20}; //My array with arguments
+	char name []= "zed"; //my string
+	char full_name[]= { 'Z', 'e','d',' ','A','.',' ','S','h','a','W','\0'}; //Here we have element by element
+	printf ("The size of an int: %ld\n", sizeof(int)); //We want to know the size of this value int
+	printf("The size of areas (int[]):%ld\n", sizeof(areas));//the size of long int. Contains 5 int and it'll print the number 20 
+	printf ("The number of inits in areas: %ld\n", sizeof(areas)/ sizeof(int)); //It says how many elements the array has
+	printf("The first area is &d, the 2nd %d.\n", areas[0], areas[1]); //We can show the value in the 0 place and the first place in the areas array
+	printf("The size of a char : %ld\n", sizeof(char)); //The same in the variable name
+	printf("The size of name (char[]): %ld\n", sizeof(name)); //The size of
 	printf ("the number of chars: %ld\n", sizeof(name)/ sizeof(char));
 	printf ("The size of ful_name (char[]): %ld\n", sizeof (full_name));
 	printf ("The number of chars: %ld\n", sizeof(full_name)/ sizeof(char));
-	printf ("name=\"%s\" and full_name=\"%s\"\n", name, full_name);
+	printf ("name=\"%s\" and full_name=\"%s\"\n", name, full_name); //We compact the name
 
 	return 0;
 }
