@@ -3,37 +3,34 @@
 int main(int argc, char *argv[])
 {
     // create two arrays we care about
-    int ages[] = { 23, 43, 12, 89, 2 };
-    char *names[] = {
-        "Alan", "Frank",
-        "Mary", "John", "Lisa"
-    };
+    int ages[] = { 23, 43, 12, 89, 2 }; //ages in an array
+    char *names[] = {"Alan", "Frank","Mary", "John", "Lisa"}; //Here is an array and is char type
 
     // safely get the size of ages
-    int count = sizeof(ages) / sizeof(int);
+    int count = sizeof(ages) / sizeof(int); //to know the size of ages and the we are going to use in our for
     int i = 0;
 
     // first way using indexing
-    for (i = 0; i < count; i++) {
-        printf("%s has %d years alive.\n", names[i], ages[i]);
+    for (i = 0; i < count; i++) { //we know the size and we can easily associate to what age each name corresponds 
+        printf("%s has %d years alive.\n", names[i], ages[i]); //we print them
     }
 
-    printf("---\n");
+    printf("---\n"); //To give space
 
     // setup the pointers to the start of the arrays
-    int *cur_age = (int*)names;
-    char **cur_name = names;
+    int *cur_age = (int*)names; //to create a "pointer to integer" type of pointer and it is stored here
+    char **cur_name = names; // names is 2-dimensional, that means you need char ** for a "pointer to (a pointer to char
 
     // second way using pointers
     for (i = 0; i < count; i++) {
-        printf("%s is %d years old.\n", *(cur_name + i), *(cur_age + i));
+        printf("%s is %d years old.\n", *(cur_name + i), *(cur_age + i)); //Here is printed the name + pointer
     }
 
     printf("---\n");
 
     // third way, pointers are just arrays
-    for (i = 0; i < count; i++) {
-        printf("%s is %d years old again.\n", cur_name[i], cur_age[i]);
+    for (i = 0; i < count; i++) { //print the element, the ages (23, 43, etc)
+        printf("%s is %d years old again.\n", cur_name[i], cur_age[i]); 
     }
 
     printf("---\n");
