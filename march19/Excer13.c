@@ -1,28 +1,28 @@
 #include <stdio.h>
 int main(int argc, char *argv[])
 {
-	if(argc != 2) {
+	if(argc != 2) { //If we have one argument, it means that the user didnt write an argument
 		printf("ERROR: You need one argument.\n");
 		// this is how you abort a program
 		return 1;
 	}
 	int i = 0;
 	for(i = 0; argv[1][i] != '\0'; i++) {
-		char letter = argv[1][i];
-		switch(letter) {
-			case 'a':
+		char letter = argv[1][i]; // [] [] this to take only a letter
+		switch(letter) { //to check if there is a vowel in the argument
+			case 'a': //are there a's?
 			case 'A':
 				printf("%d: 'A'\n", i);
 				break;
-			case 'e':
+			case 'e': //are there e's?
 			case 'E':
 				printf("%d: 'E'\n", i);
 				break;
-			case 'i':
+			case 'i': //are there i's?
 			case 'I':
 				printf("%d: 'I'\n", i);
 				break;
-			case 'o':
+			case 'o': //is there o's?
 			case 'O':
 				printf("%d: 'O'\n", i);
 				break;
@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
 				break;
 			case 'y':
 			case 'Y':
-				if(i > 2) {
+				if(i > 2) { //if this happens, so take it like a vowel
 				// it's only sometimes Y
 					printf("%d: 'Y'\n", i);
 				}
 				break;
 			default:
-				printf("%d: %c is not a vowel\n", i, letter);
+				printf("%d: %c is not a vowel\n", i, letter); //The letter is not a vowel
 			}
 		}
 	return 0;
