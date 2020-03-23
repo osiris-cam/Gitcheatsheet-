@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) { // argc contains the number of arguments that
 	char *states[]= {"California", "Oregon","Washington", "Texas"}; //This entire array contains these elements
 	int num_states = 4; // how many states are there
 	i = 0; // watch for this
-	while(i < num_states) {
+	while(i < num_states) { //To print the states and it loops the nume_sates 
 		printf("state %d: %s\n", i, states[i]);
 		i++;
 	}
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) { // argc contains the number of arguments that
         									i--;
 
     									}
-								IMPRIME:
+								PRINTS:
 arg 3: Estado3
 arg 2: Estado2
 arg 1: Estado1
